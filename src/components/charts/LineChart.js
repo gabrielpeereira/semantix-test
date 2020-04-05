@@ -55,7 +55,7 @@ export class LineChart extends Component {
 
     render() {
         return (
-            <div className="bar-container">
+            <div className="line-container">
                 <Line data={this.state.Data}
                     options={{ maintainAspectRatio: true }} />
             </div>

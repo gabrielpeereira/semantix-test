@@ -9,9 +9,10 @@ export class BarChart extends Component {
         this.state = { Data: {} };
     }
 
-    componentDidMount() {
+    //Função para montar o Grafico Bar
+   async componentDidMount() {
 
-        axios.get(`https://private-afe609-testefront.apiary-mock.com/anual-result`)
+       await axios.get(`https://private-afe609-testefront.apiary-mock.com/anual-result`)
             .then(res => {
                 const chart = res.data;
 
