@@ -1,11 +1,11 @@
 import React from 'react';
-import Polararea from './components/charts/Bar';
+import BarChart from './components/charts/BarChart';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Polararea />
+      <BarChart />
     </div>
   );
 }
