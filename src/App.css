@@ -9,26 +9,14 @@ h1, h2 {
   font-style: normal;
   font-weight: bold;
 }
-.bar-container {
-  width: 400px;
+
+
+.line-container {
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 0 auto;
 }
 
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  background: linear-gradient(180deg, #0F4C81 -11.46%, #118ACA 87.25%);
-}
 
-.menu li a{
-  display:block;
-  width:5em;
-  text-align:center;
-  color: #fff;
-  position: relative;
-}

@@ -6,7 +6,7 @@ import { FiSearch, FiLogOut, FiFolder } from 'react-icons/fi'
 export default function Header() {
     return (
         <header className="menu">
-
+            Semantix
             <div className="menu-pages">
                 <div className="menu-page1">
                     <Link className="back-link" to="/">
@@ -25,8 +25,11 @@ export default function Header() {
             </div>
 
             <div>
+            <Link className="back-link" to="/">
                 <FiLogOut size={16} color="#fff" >
                     Logout  </FiLogOut>
+                    </Link>
+                
             </div>
 
 
