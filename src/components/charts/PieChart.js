@@ -28,7 +28,7 @@ export class PieChart extends Component {
                         labels: label,
                         datasets: [
                             {
-                                label: 'BAR CHART',
+                                label: 'PIE CHART',
                                 data: value,
                                 backgroundColor: [
                                     "#ABE1FA",

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BarChart from '../../components/charts/BarChart';
+import PieChart from '../../components/charts/PieChart';
 import '../../App.css';
 
 
@@ -17,6 +19,8 @@ export default function Page1(){
                 
             </header>
             <h1>Página de teste 1</h1>
+            <BarChart />
+            <PieChart />
         </div>
     )
 }

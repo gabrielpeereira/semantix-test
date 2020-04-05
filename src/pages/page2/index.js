@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LineChart from '../../components/charts/LineChart';
 import '../../App.css';
 
 
@@ -16,6 +17,8 @@ export default function Page2(){
                 
             </header>
             <h1>Página de teste 2</h1>
+
+            <LineChart />
         </div>
     )
 }
