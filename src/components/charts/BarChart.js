@@ -19,9 +19,9 @@ export class BarChart extends Component {
                 let label = [];
                 let value = [];
 
-                chart.map(record => {
-                        label.push(record.label);
-                        value.push(record.value);
+                chart.map(indexChart => {
+                        label.push(indexChart.label);
+                        value.push(indexChart.value);
                     
                 });
 
