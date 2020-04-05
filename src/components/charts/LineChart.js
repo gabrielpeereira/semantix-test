@@ -28,7 +28,7 @@ export class LineChart extends Component {
                         value1.push(record.value);
                     
                 });
-
+                
                 chart.yesterday.map(chartValue => {
                     label2.push(chartValue.label);
                     value2.push(chartValue.value);
@@ -37,7 +37,9 @@ export class LineChart extends Component {
 
                 this.setState({
                     Data: {
-                        labels: [label1. label2], 
+                        labels: label1,
+                        
+                        
                         datasets: [
                             {
                                 label: 'Today',
@@ -58,6 +60,7 @@ export class LineChart extends Component {
                                     "#03A9F4"
                                 ],
                             }, {
+                                
                                 label: 'Yesterday',
                                 data: value2,
                                 yAxisID: 'yesterday',
@@ -77,7 +80,9 @@ export class LineChart extends Component {
                                 ],
                             }
                            
-                        ]
+                        ],
+                        
+                        
                     }
                 });
             })
