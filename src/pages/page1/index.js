@@ -11,14 +11,11 @@ export default function Page1(){
         <div className="chart-container">
                 <Header />
                 <div>
-                <section class="grid-template-rows-1">
-                <h1>Página de teste 1</h1>
-                    <div>
+                <section class="charts-types">
+                
                         <BarChart />
-                    </div>
-                    <div>
+                    
                         <PieChart />
-                    </div>
                 </section>
                 </div>
             
