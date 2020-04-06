@@ -1,9 +1,15 @@
-# Tecnologias que utlizei no teste Front-end
+## Tecnologias que utlizei no teste Front-end
 
 - React,
 - Rotas para desenvolver o SPA;
 - Axios para manipulação de Apis;
 - React Icons para os icones;
+
+## Como excutar o teste
+- Versão do Nodejs: 12.16.1
+Neste teste foram usandas alguns modulos e apis, para executar, após ter acessado o diretório instale as dependências:
+- npm install
+- npm start
 
 <img src="https://semantix.com.br/wp-content/uploads/2019/12/Semantix-horizontal.png" alt="drawing" width="200"/>
 
