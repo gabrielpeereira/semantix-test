@@ -19,4 +19,16 @@ h1, h2 {
   margin: 0 auto;
 }
 
+.title-charts {
+  margin-left: 100px;
+}
+
+.title-charts h1 {
+  margin-bottom: 0;
+}
+
+.title-charts p {
+  margin-top: 0;
+}
+
 
