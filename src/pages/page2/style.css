@@ -1,0 +1,15 @@
+.pie-container, .bar-container, .line-container {
+	max-width: 100%;
+	width: 650px;
+}
+
+.charts-types {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 73px;
+    flex-direction: row;
+}
+
+.charts-types > div {
+	margin: 10px;
+}

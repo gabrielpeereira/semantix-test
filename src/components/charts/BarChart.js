@@ -57,6 +57,7 @@ export class BarChart extends Component {
     render() {
         return (
             <div className="bar-container">
+            <h2 className="title-charts">BAR CHART</h2>
                 <Bar data={this.state.Data}
                     options={{ maintainAspectRatio: true }} />
             </div>

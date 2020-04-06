@@ -10,24 +10,24 @@ h1, h2 {
   font-weight: bold;
 }
 
-
-.line-container {
-  width: 700px;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  margin: 0 auto;
-}
-
 .title-charts {
-  margin-left: 100px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+  color: #035A27;
 }
 
-.title-charts h1 {
+.title-pages{
+  margin-left: 83px;
+}
+
+.title-pages h1 {
   margin-bottom: 0;
 }
 
-.title-charts p {
+.title-pages p {
   margin-top: 0;
 }
 

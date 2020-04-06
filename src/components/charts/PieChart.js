@@ -47,6 +47,7 @@ export class PieChart extends Component {
     render() {
         return (
             <div className="pie-container">
+            <h2 className="title-charts">PIE CHART</h2>
                 <Pie data={this.state.Data}
                     options={{ maintainAspectRatio: true }} />
             </div>

@@ -72,6 +72,7 @@ export class LineChart extends Component {
     render() {
         return (
             <div className="line-container">
+            <h2 className="title-charts">LINE CHART</h2>
                 <Line data={this.state.Data}
                     options={{ 
                         scales: {

@@ -10,16 +10,15 @@ export default function Page1(){
     return(
         <div className="chart-container">
                 <Header />
-                <div className="title-charts">
+                <div className="title-pages">
                     <h1>Página de teste 1</h1>
                     <p>Description</p>
                 </div>
                 <div>
-                <section class="charts-types">
-                
+                    <section class="charts-types">
                         <BarChart />
                         <PieChart />
-                </section>
+                    </section>
                 </div>
             
         </div>
