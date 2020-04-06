@@ -33,18 +33,18 @@ export class BarChart extends Component {
                                 label: 'BAR CHART',
                                 data: value,
                                 backgroundColor: [
-                                    "#03A9F4",
-                                    "#03A9F4",
-                                    "#03A9F4",
-                                    "#03A9F4",
-                                    "#03A9F4",
-                                    "#03A9F4",
-                                    "#03A9F4",
-                                    "#03A9F4",
-                                    "#03A9F4",
-                                    "#03A9F4",
-                                    "#03A9F4",
-                                    "#03A9F4"
+                                    "#23366e",
+                                    "#23366e",
+                                    "#23366e",
+                                    "#23366e",
+                                    "#23366e",
+                                    "#23366e",
+                                    "#23366e",
+                                    "#23366e",
+                                    "#23366e",
+                                    "#23366e",
+                                    "#23366e",
+                                    "#23366e"
                                 ],
                             }
                         ]
@@ -59,7 +59,14 @@ export class BarChart extends Component {
             <div className="bar-container">
             <h2 className="title-charts">BAR CHART</h2>
                 <Bar data={this.state.Data}
-                    options={{ maintainAspectRatio: true }} />
+                    options={{ maintainAspectRatio: true,
+                        legend: {
+                            display: false,
+                            position: 'top',
+                            labels: {
+                                fontColor: '#333'
+                            }
+                        } }} />
             </div>
         )
     }

@@ -9,8 +9,8 @@ export class PieChart extends Component {
         this.state = { Data: {} };
     }
 
-   async componentDidMount() {
-      await axios.get(`https://private-afe609-testefront.apiary-mock.com/anual-percentage`)
+    async componentDidMount() {
+        await axios.get(`https://private-afe609-testefront.apiary-mock.com/anual-percentage`)
             .then(res => {
                 const chart = res.data;
 
@@ -18,9 +18,9 @@ export class PieChart extends Component {
                 let value = [];
 
                 chart.map(record => {
-                        label.push(record.label);
-                        value.push(record.value);
-                    
+                    label.push(record.label);
+                    value.push(record.value);
+
                 });
 
                 this.setState({
@@ -33,9 +33,10 @@ export class PieChart extends Component {
                                 backgroundColor: [
                                     "#ABE1FA",
                                     "#035A27",
-                                    "#ABE1FA"
-                                    
+                                    "#118aca"
+
                                 ],
+                                borderWidth: 1,
                             }
                         ]
                     }
@@ -47,9 +48,18 @@ export class PieChart extends Component {
     render() {
         return (
             <div className="pie-container">
-            <h2 className="title-charts">PIE CHART</h2>
+                <h2 className="title-charts">PIE CHART</h2>
                 <Pie data={this.state.Data}
-                    options={{ maintainAspectRatio: true }} />
+                    options={{
+                        maintainAspectRatio: true,
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                            }
+                        }
+                    }} />
             </div>
         )
     }

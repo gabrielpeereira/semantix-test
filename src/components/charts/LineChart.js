@@ -11,7 +11,7 @@ export class LineChart extends Component {
 
     async componentDidMount() {
 
-       await axios.get(`https://private-afe609-testefront.apiary-mock.com/time-data`)
+        await axios.get(`https://private-afe609-testefront.apiary-mock.com/time-data`)
             .then(res => {
                 const chart = res.data;
                 console.log(chart.yesterday);
@@ -23,15 +23,15 @@ export class LineChart extends Component {
                 let label2 = [];
                 let value2 = [];
 
-                
+
                 chart.today.map(indexChart => {
-                     label1.push(indexChart.label);
-                     value1.push(indexChart.value);
+                    label1.push(indexChart.label);
+                    value1.push(indexChart.value);
                 });
-                
+
                 chart.yesterday.map(indexChart => {
-                     label2.push(indexChart.label);
-                     value2.push(indexChart.value);
+                    label2.push(indexChart.label);
+                    value2.push(indexChart.value);
                 });
 
                 this.setState({
@@ -45,24 +45,24 @@ export class LineChart extends Component {
                                 fill: 'none',
                                 borderWidth: 1,
                                 lineTension: 0,
-                                backgroundColor: 'black',
-                                borderColor: 'black',
+                                backgroundColor: '#118aca',
+                                borderColor: '#118aca',
                             }, {
-                                
+
                                 label: 'Yesterday',
                                 data: value2,
                                 yAxisID: 'yesterday',
                                 fill: 'none',
-                                backgroundColor: 'red',
+                                backgroundColor: '#035a27',
                                 pointRadius: 2,
-                                borderColor: 'black',
+                                borderColor: '#035a27',
                                 borderWidth: 1,
                                 lineTension: 0
                             }
-                           
+
                         ],
-                        
-                        
+
+
                     }
                 });
             })
@@ -72,28 +72,38 @@ export class LineChart extends Component {
     render() {
         return (
             <div className="line-container">
-            <h2 className="title-charts">LINE CHART</h2>
+                <h2 className="title-charts">LINE CHART</h2>
                 <Line data={this.state.Data}
-                    options={{ 
+                    options={{
+                        maintainAspectRatio: true,
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                            }
+                        },
                         scales: {
                             yAxes: [{
                                 id: 'today',
                                 type: 'linear',
                                 position: 'left',
-                                ticks: {
-                                    
-                                }
+                                gridLines: {
+                                    display: false
+                                },
+
                             }, {
                                 id: 'yesterday',
                                 type: 'linear',
                                 position: 'right',
-                                ticks: {
-                                    
-                                }
-                            }]
-                            }
+                                gridLines: {
+                                    display: false
+                                },
 
-                     }} />
+                            }]
+                        }
+
+                    }} />
             </div>
         )
     }
