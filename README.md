@@ -4,7 +4,6 @@
 - Rotas para desenvolver o SPA;
 - Axios para manipulação de Apis;
 - React Icons para os icones;
-- CSS flexBox
 
 <img src="https://semantix.com.br/wp-content/uploads/2019/12/Semantix-horizontal.png" alt="drawing" width="200"/>
 
