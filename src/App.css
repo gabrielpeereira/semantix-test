@@ -4,13 +4,30 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2 {
+h1 {
   font-family: Cairo;
   font-style: normal;
   font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 0.3px;
+  color: #4A4A4A;
+}
+
+p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  color: #4A4A4A;
+}
+.chart-container {
+  margin-left: 40px;
 }
 
 .title-charts {
+  font-family: Open Sans;
   font-weight: 600;
   font-size: 16px;
   line-height: 23px;

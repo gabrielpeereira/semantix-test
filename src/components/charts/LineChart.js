@@ -9,9 +9,9 @@ export class LineChart extends Component {
         this.state = { Data: {} };
     }
 
-    componentDidMount() {
+    async componentDidMount() {
 
-        axios.get(`https://private-afe609-testefront.apiary-mock.com/time-data`)
+       await axios.get(`https://private-afe609-testefront.apiary-mock.com/time-data`)
             .then(res => {
                 const chart = res.data;
                 console.log(chart.yesterday);

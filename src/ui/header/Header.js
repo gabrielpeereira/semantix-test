@@ -8,30 +8,32 @@ export default function Header() {
         <header className="menu">
             <span className="logo">Semantix</span>
             <div className="menu-pages">
-                <div className="menu-page1">
-                    <Link className="back-link" to="/">
-                        <FiFolder size={16} color="#fff" />
-                            <div>Page 1</div>
-                    </Link>
-                </div>
+                <Link className="back-link" to="/">
+                    <div className="menu-page1">
 
-                <div className="menu-page2">
-                    <Link className="back-link" to="/page2">
-                        <FiSearch size={16} color="#fff" />
+                        <FiFolder size={32} color="#fff" />
+                        <div>Page 1</div>
+
+                    </div>
+                </Link>
+
+                <Link className="back-link" to="/page2">
+                    <div className="menu-page2">
+
+                        <FiSearch size={32} color="#fff" />
                         <div>Page 2</div>
-                    </Link>
-                </div>
 
+                    </div>
+                </Link>
             </div>
-
-            <div>
             <Link className="back-link" to="/">
-                <FiLogOut size={16} color="#fff" />
-                <div>Logout </div>  
-                    
-            </Link>
-            </div>
+                <div className="menu-logout">
 
+                    <FiLogOut size={29} color="#fff" />
+                    <div>Logout </div>
+
+                </div>
+            </Link>
 
         </header>
     );

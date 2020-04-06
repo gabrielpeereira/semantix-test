@@ -9,8 +9,8 @@ export class PieChart extends Component {
         this.state = { Data: {} };
     }
 
-    componentDidMount() {
-        axios.get(`https://private-afe609-testefront.apiary-mock.com/anual-percentage`)
+   async componentDidMount() {
+      await axios.get(`https://private-afe609-testefront.apiary-mock.com/anual-percentage`)
             .then(res => {
                 const chart = res.data;
 
