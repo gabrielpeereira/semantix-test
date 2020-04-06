@@ -89,7 +89,7 @@ export class LineChart extends Component {
                                 type: 'linear',
                                 position: 'left',
                                 gridLines: {
-                                    display: false
+                                    drawOnChartArea: false
                                 },
 
                             }, {
@@ -100,7 +100,8 @@ export class LineChart extends Component {
                                     display: false
                                 },
 
-                            }]
+                            }],
+                            
                         }
 
                     }} />

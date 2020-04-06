@@ -10,9 +10,9 @@ export class BarChart extends Component {
     }
 
     //Função para montar o Grafico Bar
-   async componentDidMount() {
+    async componentDidMount() {
 
-       await axios.get(`https://private-afe609-testefront.apiary-mock.com/anual-result`)
+        await axios.get(`https://private-afe609-testefront.apiary-mock.com/anual-result`)
             .then(res => {
                 const chart = res.data;
 
@@ -20,9 +20,9 @@ export class BarChart extends Component {
                 let value = [];
 
                 chart.map(indexChart => {
-                        label.push(indexChart.label);
-                        value.push(indexChart.value);
-                    
+                    label.push(indexChart.label);
+                    value.push(indexChart.value);
+
                 });
 
                 this.setState({
@@ -57,16 +57,33 @@ export class BarChart extends Component {
     render() {
         return (
             <div className="bar-container">
-            <h2 className="title-charts">BAR CHART</h2>
+                <h2 className="title-charts">BAR CHART</h2>
                 <Bar data={this.state.Data}
-                    options={{ maintainAspectRatio: true,
+                    options={{
+                        maintainAspectRatio: true,
+                        scales: {
+                            xAxes: [{
+                                gridLines: {
+                                    drawOnChartArea: false
+                                }
+                            }],
+                            yAxes: [{
+                                gridLines: {
+                                    drawOnChartArea: false
+                                }
+                            }]
+                        },
                         legend: {
                             display: false,
                             position: 'top',
                             labels: {
                                 fontColor: '#333'
-                            }
-                        } }} />
+                            },
+                            gridLines: {
+                                display: false,
+                            },
+                        }
+                    }} />
             </div>
         )
     }
