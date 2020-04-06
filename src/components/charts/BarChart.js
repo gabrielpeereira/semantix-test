@@ -12,6 +12,7 @@ export class BarChart extends Component {
     //Função para montar o Grafico Bar
     async componentDidMount() {
 
+        //Callback de retorno da api
         await axios.get(`https://private-afe609-testefront.apiary-mock.com/anual-result`)
             .then(res => {
                 const chart = res.data;
@@ -19,6 +20,7 @@ export class BarChart extends Component {
                 let label = [];
                 let value = [];
 
+                // eslint-disable-next-line array-callback-return
                 chart.map(indexChart => {
                     label.push(indexChart.label);
                     value.push(indexChart.value);
@@ -54,6 +56,8 @@ export class BarChart extends Component {
 
     }
 
+
+    //Renderizando Grafico Bar
     render() {
         return (
             <div className="bar-container">

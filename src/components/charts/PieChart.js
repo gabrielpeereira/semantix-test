@@ -8,8 +8,10 @@ export class PieChart extends Component {
         super(props);
         this.state = { Data: {} };
     }
-
+//Função para montar o Grafico Pie
     async componentDidMount() {
+
+        //Callback de retorno da api
         await axios.get(`https://private-afe609-testefront.apiary-mock.com/anual-percentage`)
             .then(res => {
                 const chart = res.data;
@@ -17,9 +19,10 @@ export class PieChart extends Component {
                 let label = [];
                 let value = [];
 
-                chart.map(record => {
-                    label.push(record.label);
-                    value.push(record.value);
+                // eslint-disable-next-line array-callback-return
+                chart.map(indexChart => {
+                    label.push(indexChart.label);
+                    value.push(indexChart.value);
 
                 });
 
@@ -44,7 +47,7 @@ export class PieChart extends Component {
             })
 
     }
-
+    //Renderizando Grafico Pie
     render() {
         return (
             <div className="pie-container">

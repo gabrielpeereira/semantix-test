@@ -8,9 +8,10 @@ export class LineChart extends Component {
         super(props);
         this.state = { Data: {} };
     }
-
+    //Função para montar o Grafico Line
     async componentDidMount() {
 
+    //Callback de retorno da api
         await axios.get(`https://private-afe609-testefront.apiary-mock.com/time-data`)
             .then(res => {
                 const chart = res.data;
@@ -23,12 +24,12 @@ export class LineChart extends Component {
                 let label2 = [];
                 let value2 = [];
 
-
+            // eslint-disable-next-line array-callback-return
                 chart.today.map(indexChart => {
                     label1.push(indexChart.label);
                     value1.push(indexChart.value);
                 });
-
+            // eslint-disable-next-line array-callback-return
                 chart.yesterday.map(indexChart => {
                     label2.push(indexChart.label);
                     value2.push(indexChart.value);
@@ -68,7 +69,7 @@ export class LineChart extends Component {
             })
 
     }
-
+    //Renderizando Grafico Line
     render() {
         return (
             <div className="line-container">
@@ -78,6 +79,7 @@ export class LineChart extends Component {
                         maintainAspectRatio: true,
                         legend: {
                             display: true,
+                            width: 100,
                             position: 'top',
                             labels: {
                                 usePointStyle: true,
