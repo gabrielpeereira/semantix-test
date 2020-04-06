@@ -28,7 +28,15 @@ a {
     height: 800px;
   }
 
-  .menu-page1, .menu-page2, .menu-logout {
+  .menu-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 112px;
+  }
+
+  .menu-page1, .menu-page2, .menu-logout{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,5 +46,5 @@ a {
 
   .menu-page1:hover, .menu-page2:hover, .menu-logout:hover{
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.0001) 0%, rgba(255, 255, 255, 0.3) 92.81%);
-    transition: width 2s, height 4s;
+    transition: 1s;
   }
